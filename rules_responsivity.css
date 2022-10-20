@@ -1,0 +1,263 @@
+@media screen and (max-width: 500px) {
+ .main-box {
+  height: 70vh;
+ 
+ }
+
+ .brief-box {
+  background-color:#F1EBD3;
+  height: fit-content;
+  width: 90vw;
+  margin: auto;
+ }
+ 
+ .brief-child {
+  display: inline-block;
+  width: 35vw;
+  vertical-align: middle;
+  padding-bottom: 25px;
+ 
+ }
+ 
+ #brief-image {
+  margin-right: 6vw;
+  width: 45vw;
+ }
+ 
+ #brief-text {
+  padding: 35px;
+  font-size: 3vw;
+  width: 60vw;
+ 
+ }
+ 
+ #brief-text button {
+  width: 20vw;
+  height: 5vw;
+  font-size: 2.5vw;
+ }
+ 
+ #brief-text button:hover {
+  color: #BF2608;
+  width: 20vw;
+  height: 5vw;
+  font-size: 2.5vw;
+
+ }
+
+ .review-box {
+  width: 60vw;
+  margin-left: 0;
+  padding: 2rem 2rem;
+ }
+ 
+ .review-child {
+  display: inline-block;
+  vertical-align: middle;
+  /* border: solid; */
+ 
+ }
+ 
+ .review-child:last-child {
+  display: inline-block;
+  width: 60%;
+  /* vertical-align: middle; */
+  /* border: solid; */
+  margin-left: 5px;
+  padding-top: 19px;
+ 
+ }
+ 
+ .review-image {
+  width: 80vw;
+  padding-bottom: 5px;
+ }
+ 
+ 
+ #review-text {
+  text-align: left;
+  display: inline-block;
+  margin-left: 0;
+  color:#BF2608;
+  font-size: 10vw;
+ }
+ 
+ #review-seals {
+  align-items: left;
+  margin-left: 0;
+  padding-top: 10px;
+  width: 60vw;
+ }
+ 
+ .seal-image {
+  width: 20vw;
+  display:inline-block;
+  vertical-align: middle;
+ }
+ 
+ .review-box hr {
+  border: 0;
+  border-top: 3px solid #BF2608;
+  width: 200%;
+  margin-left: 0%;
+ }
+ 
+ .slide-box {
+  background-color: #E28025;
+  width: 100vw;
+  height: fit-content;
+  text-decoration: none;
+ }
+ 
+ .slide-box h2 {
+  color: white;
+  text-align: center;
+  padding-top: 3vw;
+ }
+ 
+ .container {
+  max-width: 95vw;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: auto;
+ }
+ 
+ .horscroll {
+  display: -webkit-inline-box;
+  width: 100%;
+  overflow: auto;
+  
+ }
+ 
+ .container ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+ }
+ 
+ .container li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+ }
+ 
+ 
+ /* elements inside of the menu-slide */
+ 
+ 
+
+}
+
+@media screen and (max-width: 350px) {
+ .main-box {
+  height: 40vh;
+ 
+ }
+
+ .brief-box {
+  height: fit-content;
+  width: 90vw;
+  margin: auto;
+ }
+ 
+ .brief-child {
+  display: inline-block;
+  width: 35vw;
+  vertical-align: middle;
+  padding-bottom: 25px;
+ 
+ }
+ 
+ #brief-image {
+  width: 45vw;
+ }
+ 
+ #brief-text {
+  padding: 12px;
+  font-size: 3vw;
+  width: 60vw;
+ 
+ }
+ 
+ 
+ .slide-box {
+  background-color: #E28025;
+  width: 100vw;
+  height: fit-content;
+  text-decoration: none;
+ }
+ 
+ .slide-box h2 {
+  color: white;
+  text-align: center;
+  padding-top: 1vw;
+ }
+ 
+ .container {
+  max-width: 95vw;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+ }
+ 
+ .horscroll {
+  display: -webkit-inline-box;
+  width: 100%;
+  overflow: auto;
+  
+ }
+ 
+ .container ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+ }
+ 
+ .container li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+  margin: 15px;
+ }
+
+
+ .card {
+  max-width: 150px;
+  width: 100%;
+  height: 390px;
+  margin: 13px;
+ }
+ 
+ 
+ .card img {
+  width: 100%;
+  max-width: 150px;
+  height: 120px;
+  position:relative;
+ 
+ }
+
+ .title-line object {
+  grid-row-start: 1;
+  grid-column-start: 2;
+  max-width: 20px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 3%;
+  align-self: center;
+ }
+ 
+ .title-line p {
+  font-weight:400;
+  font-size: 13px;
+  margin-bottom: 1%;
+  text-align: right;
+  margin-right: 7px;
+ }
+ 
+ .card .description {
+  padding: 10px;
+  font-size: 11.5px;
+ }
+ 
+}
