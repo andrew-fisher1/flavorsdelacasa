@@ -15,21 +15,19 @@ body {
 }
 
 header {
- border: solid;
  width: 100%;
  height: 100px;
- background-color: #F1EBD3;
+ background-color: white;
 }
 
 footer {
  width: 100vw;
  height: 150px;
- background-color: #F1EBD3;
+ background-color: white;
 }
 
 #content-box {
  background-color:#F1EBD3;
- border: solid;
  width: 100vw;
  padding: 5%;
 }
@@ -156,10 +154,10 @@ footer {
 
 #cart-box table {
  box-sizing: border-box;
- padding: 0.9rem;
+ padding: 2rem;
  display: grid;
  grid-template-columns: 1fr 1fr 1fr 1fr;
- gap: 1rem;
+ gap: 0.7rem;
  /* max-width: 35vw; */
  width: 35vw;
 }
@@ -187,7 +185,7 @@ footer {
 
 .items .selector {
  text-align: center;
- margin: auto;
+ margin-left: auto;
 }
 
 .ico img {
@@ -200,8 +198,8 @@ footer {
 
 .items .ico {
  margin: auto;
- min-width: 80px;
- min-height: 80px;
+ min-width: 60px;
+ min-height: 60px;
 }
 
 .items .type {
@@ -233,7 +231,7 @@ footer {
 }
 
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
  .content-column { width: 100%; display: block; position: relative; }
  .content-column:last-child { width: 100%;}
  .content-column:first-child { width: 100%; }
@@ -243,13 +241,31 @@ footer {
  #button_cart p {font-size: 8vw;}
 
  #cart-box table {
-  gap: 1rem;
-  max-width: 10vw;
+  column-gap: 5%;
+  /* max-width: 10vw; */
+  padding-left: 2rem;
+  padding-right:2rem;
   width: 100%;
  }
 
 }
 
+.Finals {
+ display: grid;
+ grid-template-columns: 1fr 4fr;
+}
+
+#calculations {
+ padding-bottom: 2rem;
+ padding-right: 2rem;
+ text-align: right;
+ font-size: 1.3rem;
+}
+
+#calculations #orderTotal {
+ font-size: 1.6rem;
+ color:#BF2608;
+}
 
 /* temporary - TODO: delete once start styling of cart */
 
