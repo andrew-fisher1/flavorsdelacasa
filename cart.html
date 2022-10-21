@@ -152,7 +152,7 @@
 
     <div class="content-column"> <!-- Second  child - colun -->
      <div id='cart-box'> <!-- products column -->
-      <h2> Add Items to Your Cart! </h2>
+      <h2> Our Menu </h2>
    
       <table border="0" cellpadding="10" class="items" style="grid-column: 1 / -1;">
        <script>
@@ -165,7 +165,7 @@
          new recipe("ceviche", 5),
          new recipe("ceviche", 2),
          new recipe("ceviche", 2),
-         new recipe("ceviche", 2),
+         // new recipe("ceviche", 2),
         )
    
         var s = "";
@@ -184,8 +184,8 @@
    
         function makeSelector(index2) {
          index = index2;
-         plusButton = "<img src= \"plus.png \"  width= \"20 \" height= \" 20 \" onclick = \"change(0," + index + ") \">"
-         minusButton = "<img src= \"negative-sign.png \"  width= \"20 \" height= \" 20 \" onclick = \"change(1," + index + ")\">"
+         plusButton = "<img src= \"images/plus.png \"  width= \"20 \" height= \" 20 \" onclick = \"change(0," + index + ") \">"
+         minusButton = "<img src= \"images/negative-sign.png \"  width= \"20 \" height= \" 20 \" onclick = \"change(1," + index + ")\">"
          amountDisplay = "<p class = \" amount \">0</p>"
          return (plusButton + amountDisplay + minusButton);
         }
@@ -249,7 +249,7 @@
      
      </div><!-- end col 2 - second child -->
      <br><br>
-     <button id="button_cart">CHECKOUT</button>
+     <button id="button_cart"><p>CHECKOUT</p></button>
    
      </div>
      
