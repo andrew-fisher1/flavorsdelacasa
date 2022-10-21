@@ -75,20 +75,20 @@
 
       <form>
        <div>
-         <label for="name">First Name*</label>
+         <label for="name">First Name</label>
          <input id="name" type="text" />
        </div>
        <div>
-         <label for="lname">Last Name*</label>
+         <label for="lname">Last Name</label>
          <input id="lname" type="text" />
        </div>
        <div>
-        <label for="street">Street*</label>
-        <input id="street" type="text" />
+        <label for="street">Street</label>
+        <input id="lname" type="text" />
       </div>
 
       <div>
-       <label for="stateselector">State*</label>
+       <label for="stateselector">State</label>
        <input list="states" id="stateselector">
       
       <datalist id="states">
@@ -115,7 +115,7 @@
       </div>
       
       <div>
-       <label for="zip">Zip Code*</label>
+       <label for="zip">Zip Code</label>
        <input type="text" id="zip">
       </div>
       
@@ -137,12 +137,12 @@
       <h2>Payment Information</h2>
    <form>
     <div style="grid-column: 1 / -1;">
-     <label for="cardnumber">Credit Card Number*</label>
+     <label for="cardnumber">Credit Card</label>
      <input id="cardnumber" type="text" placeholder="•••• •••• •••• ••••" />
    </div>
    <div></div>
    <div style="grid-column: 1 / -1;">
-    <label for="cvv">CVV*</label>
+    <label for="cvv">CVV</label>
     <input id="cvv" type="text" placeholder="•••" />
   </div>
    </form>
@@ -213,8 +213,8 @@
          }
          
          $('#subtotal')[0].textContent = "Subtotal: $" + twoDecimal(subtotal);
-         $('#shippingFee')[0].textContent = "5% Shipping Fee: $" + twoDecimal(subtotal * .05);
-               $('#orderTotal')[0].textContent = "Order Total: $" + twoDecimal((subtotal * .05) + subtotal);
+         $('#shippingFee')[0].textContent = "Shipping Fee: $" + twoDecimal(subtotal * .05);
+               $('#orderTotal')[0].textContent = "Total: $" + twoDecimal((subtotal * .05) + subtotal);
         }
    
              // makes it so that all costs will have two decimal places. Taken from Andrew's Jade Delight
@@ -235,25 +235,24 @@
              
                return number;
              }
-	       
-	     function validateAndSubmit(){
-		alert(1);
-	     }
    
        </script>
       
      </table>
 
-   
-      <div class="temporary">
+      <div class="Finals">
+      <div></div> <!-- invisible column for grid -->
+      <div id="calculations">
         <p id=subtotal>Subtotal: $0.00</p>
-        <p id =shippingFee>5% Shipping Fee: $0.00</p>
-        <p id= orderTotal>Order Total: $0.00</p>
+        <p id =shippingFee>Shipping Fee: $0.00</p>
+        <br></r><hr><br>
+        <p id= orderTotal>Total: $0.00</p>
       </div>
-     
+     </div>
+
      </div><!-- end col 2 - second child -->
      <br><br>
-     <button onclick = "validateAndSubmit" id="button_cart"><p>CHECKOUT</p></button>
+     <button id="button_cart"><p>CHECKOUT</p></button>
    
      </div>
      
@@ -261,7 +260,7 @@
     </section> <!-- end content-->
         
  <footer>
-  This is the foote
+  This is the footer
  </footer>
     </body>
 </html>
