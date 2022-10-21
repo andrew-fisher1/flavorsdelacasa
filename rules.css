@@ -18,7 +18,7 @@ h2 {
 }
 
 body {
- background-color: #F1EBD3;
+ background-color: white;
  font-family: 'Lato', sans-serif;
 }
 
@@ -245,7 +245,7 @@ header {
 }
 
 .review-box {
- background-color:#F1EBD3;
+ background-color:white;
  height: fit-content;
  width: 100vw;
  margin: auto;
@@ -284,7 +284,7 @@ header {
 }
 
 #review-seals {
- align-items: right;
+ text-align: right;
  margin: auto;
  margin-left: 29%;
  padding-top: 10px;
@@ -306,5 +306,5 @@ header {
 footer {
  width: 100vw;
  height: 150px;
- background-color: #BF2608;
+ background-color: #F1EBD3;
 }

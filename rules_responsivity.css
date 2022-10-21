@@ -4,6 +4,12 @@
  
  }
 
+ .fix-borders {
+  background-color: #F1EBD3;
+  width: 100vw;
+  height:fit-content;
+ }
+
  .brief-box {
   background-color:#F1EBD3;
   height: fit-content;
@@ -83,7 +89,7 @@
  }
  
  #review-seals {
-  align-items: left;
+  text-align: left;
   margin-left: 0;
   padding-top: 10px;
   width: 60vw;

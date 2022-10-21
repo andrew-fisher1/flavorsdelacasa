@@ -3,16 +3,26 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Southern Recipes</title>
+    <title>Flavors de La Casa</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="rules.css">
     <link rel="stylesheet" href="rules_responsivity.css">
     <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
-    <script type="text/javascript" src="index.js"></script>
+    <!-- <script type="text/javascript" src="index.js"></script> -->
   </head>
   <body>
   <div class="background"></div>
 
    <header> WEBSiTE </header>
+
+   <script>
+    // fades in main elements of the page
+    $(document).ready(function() {
+     // $("main-logo, main-logo").pagefade(1000, 1000);
+     $('#main-logo').hide().fadeIn(3000);
+     $('#main-text').hide().fadeIn(3000);
+     });
+   </script>
 
    <section class="main-box"> 
     <div class="main-content">
@@ -22,17 +32,19 @@
     </div>
    </section>
 
-   <section class="brief-box"> <!-- parent -->
-    <img class="brief-child" id="brief-image" src="images/AWARD.png"> <!--child 1-->
+   <div class="fix-borders">
+    <section class="brief-box"> <!-- parent -->
+        <img class="brief-child" id="brief-image" src="images/AWARD.png"> <!--child 1-->
 
-    <p class="brief-child" id="brief-text"> With fresh products obtained from local producers, you will have four new meal kits every month honoring the cuisine from one of the 33 countries in Latin America.
-     We started our company inspired in the problem of so many Latinxs who immigrate to the US and loose connection with their heritages, people like us! 
-     <br><br>
+        <p class="brief-child" id="brief-text"> With fresh products obtained from local producers, you will have four new meal kits every month honoring the cuisine from one of the 33 countries in Latin America.
+         We started our company inspired in the problem of so many Latinxs who immigrate to the US and loose connection with their heritages, people like us! 
+         <br><br>
 
-     <a href="#"></a>
-     <button #id="brief-button">About us</button>
-    </p>
-   </section>
+         <a href="#"></a>
+         <button #id="brief-button">About us</button>
+        </p>
+   </div>
+      </section>
 
    <section class="slide-box">
     <!-- subheading for this apge using h2 -->
