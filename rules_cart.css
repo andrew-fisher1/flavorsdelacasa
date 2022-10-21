@@ -159,7 +159,7 @@ footer {
  padding: 0.9rem;
  display: grid;
  grid-template-columns: 1fr 1fr 1fr 1fr;
- gap: 2rem;
+ gap: 1rem;
  /* max-width: 35vw; */
  width: 35vw;
 }
@@ -187,26 +187,34 @@ footer {
 
 .items .selector {
  text-align: center;
+ margin: auto;
 }
 
 .ico img {
  background: transparent;
  background-size: cover;
- width: 4vw;
- height: 4vw;
+ width: 60px;
+ height: 60px;
  /* width: 100%; */
+}
+
+.items .ico {
+ margin: auto;
+ min-width: 80px;
+ min-height: 80px;
 }
 
 .items .type {
  text-align: left;
+ margin: auto;
+ font-size: 1.2rem;
+ 
 }
 
-.items .qty {
- text-align: right;
-}
 
 .items .price {
  text-align: right;
+ margin: auto;
  /* font-weight:100px !important; */
  /* font-size: 40px; */
 }
