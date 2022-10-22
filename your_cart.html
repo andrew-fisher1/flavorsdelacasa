@@ -244,6 +244,111 @@
      </div><!-- end col 2 - second child -->
      <br><br>
      <button id="button_cart"><p>CHECKOUT</p></button>
+		
+     <script>
+
+     $('#button_cart')[0].onclick= function(){
+      if (validate()){
+
+        myWindow = window.open("", "OrderSummary", "width=1000,height=500");
+        myWindow.document.write('<html><head><link rel= \"stylesheet \" type= \"text/css \" href= \"confirmation.css \"></head>');
+        myWindow.document.writeln("<body><h1>Gracias! Thank you for your order, " + $('#name')[0].value + "!</h1>");
+        myWindow.document.writeln("<p>You Ordered: </p><ul>")
+        
+        for (i = 0; i < recipes.length; i++){
+          if($('.amount')[i].textContent != 0)
+            myWindow.document.writeln("<li>" + $('.amount')[i].textContent + "x " + recipes[i].name +  "</li>")
+        }
+        
+
+        myWindow.document.writeln("</ul><p>Your order will be shipped shortly and should arrive in 5-7 business days!</p></body></html>");
+      }
+
+      function validate() {
+        valid = false;
+        statevalid = false;
+        orderedSomething = false; 
+
+        for (i = 0; i < recipes.length; i++) {
+          if ($('.amount')[i].textContent != 0){
+            orderedSomething = true;
+          }
+        }
+
+	if (!orderedSomething){
+           alert('You did not order anything!');
+        }
+
+        for (i in stateList) {
+            if ($('#stateselector')[0].value == stateList[i]){
+              statevalid = true;
+              valid = true; 
+	    }
+         }
+    
+        if ($('#name')[0].value == ""){
+          valid = false;
+          alert('Please enter your first name!');
+        }
+
+        if ($('#lname')[0].value == ""){
+          valid = false;
+          alert('Please enter your last name!');
+        }
+
+         if ($('#street')[0].value == ""){
+          valid = false;
+          alert('Please enter your street address!');
+        }
+
+        if (!(statevalid)){
+          alert('Please enter a valid state!')
+        }
+
+        zipvalid = true;
+
+        for (i in $('#zip')[0].value){
+          if (isNaN($('#zip')[0].value[i]))
+            zipvalid = false;
+        }
+
+        if (zipvalid == false || $('#zip')[0].value.length != 5){
+          valid = false;
+          alert('Please enter a valid 5-digit ZIP code!')
+        }
+
+        digitcounter = 0
+        for (i in $('#cardnumber')[0].value){
+
+          if (!(isNaN($('#cardnumber')[0].value[i])))
+            digitcounter++;
+          else
+            digitcounter = 1000;
+        }
+
+        if (digitcounter != 15 && digitcounter != 16){
+          alert('Please enter a valid 15 or 16-digit credit card number (only digits)!');
+          valid = false;
+        }
+
+        digitcounter = 0
+
+        for (i in $('#cvv')[0].value){
+
+          if (!(isNaN($('#cvv')[0].value[i])))
+            digitcounter++;
+          else
+            digitcounter = 1000;
+        }
+
+        if (digitcounter != 3){
+          alert('Please enter a valid three-digit CVV!');
+          valid = false;
+        }
+        return (valid && orderedSomething);
+      }
+
+  </script> 
    
      </div>
      
