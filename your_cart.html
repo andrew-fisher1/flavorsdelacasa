@@ -3,43 +3,27 @@
     <head>
         <meta charset= “utf-8”>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-
-        <link rel="stylesheet" href="rules_cart.css">
-        <!-- <link rel="stylesheet" href="rules_responsivity.css"> -->
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+         <title>Your Cart</title>
+        <link rel="stylesheet" href="CSS/rules_cart.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="CSS/universal_rules.css">
+        <!-- <link rel="stylesheet" href="header.css"> -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+          <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
         <style>
 
-
-            /* body {background-color: #35a16e; color: black;}
-            
-            #top {background-size:cover;  height: 100px;  width: 100%; padding-top: 25px; box-sizing:border-box; text-align:center; font-size:  40px;  position:fixed;  z-index:99}
-		
-		    #content {position:absolute;  top: 100px; width: 100%}
-
-        .forms{width: 43%; display:inline-block; height: 800px; vertical-align: top; margin-left:5%; margin-right: 2%; text-align:center;}
-		    .info-form{background-color:#F1EBD3; display:inline-block; height: 250px; vertical-align: top;}
-        .credit-form{background-color:#F1EBD3; display:inline-block; height: 200px; margin-top:5%; width: 100%;}
-
-		    .add-items{width: 43%; display:inline-block; background-color:#F1EBD3;  color: black; vertical-align: top; height: 800px; margin-left: 5%; text-align:center;}
-			.add-items h1 {text-align:center;}
-			.add-items img {max-width: 130px;}
-
-			.add-items td {padding: 70px 70px 0 0; margin-left: 50px;}
-
-			.info-form td {padding: 5px;}
-			.info-form {text-align:center;} */
-
-			textarea {resize:none;} /* KEEP IT IN THE IN-STYLE SHEET*/
+   textarea {resize:none;} /* KEEP IT IN THE IN-STYLE SHEET*/
 
    #banner-box {
     width: 100vw;
     background-color: #F1EBD3;
+    background-image: url('images/food_market.jpg');
    }
 
    #banner-box h1 {
     text-align: center;
-    color: #BF2608;
+    color: white;
     font-size: 5rem;
     padding: 40px;
    }
@@ -52,20 +36,29 @@
     </head>
 
     <body>
+     <div class="hold-header">
+      <div id="header" class="header-wrapper">
+      <header class="header">
+        <img src="./images/logo.png" class="header-logo">
+        <nav class="header-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="####">Recipes</a></li>
+            <li><a href="####">About</a></li>
+            <li><a href="your_cart.html">Cart</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>  
+     </div>
+         
 
-     <header> 
-     
-      This is the header
 
-     </header>    
+ <div>
 
-      <section id='banner-box'> <!-- I assume htis is the top part -->
+ <section id='banner-box'> <!-- Main Title Section -->
         <h1>Your Cart</h1>
       </section>
-
-
-
-     
 
 	<section id='content-box'> <!-- this is the father that will hold the two columns-->
    
@@ -84,12 +77,12 @@
        </div>
        <div>
         <label for="street">Street</label>
-        <input id="street" type="text" />
+        <input id="lname" type="text" />
       </div>
 
       <div>
        <label for="stateselector">State</label>
-       <input type="text" list="states" id="stateselector">
+       <input list="states" id="stateselector">
       
       <datalist id="states">
      
@@ -164,7 +157,8 @@
         recipes = new Array (
          new recipe("ceviche", 5),
          new recipe("ceviche", 2),
-         new recipe("ceviche", 4),
+         new recipe("ceviche", 2),
+         // new recipe("ceviche", 2),
         )
    
         var s = "";
@@ -179,11 +173,12 @@
         }
 
         document.writeln(s);
+             twoDecimal(18.9);
    
         function makeSelector(index2) {
          index = index2;
-         plusButton = "<img src= \"images/plus.png \"   height= \" 20 \" onclick = \"change(0," + index + ") \">"
-         minusButton = "<img src= \"images/negative-sign.png \"   height= \" 20 \" onclick = \"change(1," + index + ")\">"
+         plusButton = "<img src= \"images/plus.png \"  width= \"20 \" height= \" 20 \" onclick = \"change(0," + index + ") \">"
+         minusButton = "<img src= \"images/negative-sign.png \"  width= \"20 \" height= \" 20 \" onclick = \"change(1," + index + ")\">"
          amountDisplay = "<p class = \" amount \">0</p>"
          return (plusButton + amountDisplay + minusButton);
         }
@@ -211,8 +206,8 @@
          }
          
          $('#subtotal')[0].textContent = "Subtotal: $" + twoDecimal(subtotal);
-         $('#shippingFee')[0].textContent = "5% Shipping Fee: $" + twoDecimal(subtotal * .05);
-               $('#orderTotal')[0].textContent = "Order Total: $" + twoDecimal((subtotal * .05) + subtotal);
+         $('#shippingFee')[0].textContent = "Shipping Fee: $" + twoDecimal(subtotal * .05);
+               $('#orderTotal')[0].textContent = "Total: $" + twoDecimal((subtotal * .05) + subtotal);
         }
    
              // makes it so that all costs will have two decimal places. Taken from Andrew's Jade Delight
@@ -232,138 +227,107 @@
                    number = number + "0";
              
                return number;
-             }   
+             }
+   
        </script>
       
      </table>
 
-   
-      <div class="temporary">
+      <div class="Finals">
+      <div></div> <!-- invisible column for grid -->
+      <div id="calculations">
         <p id=subtotal>Subtotal: $0.00</p>
-        <p id =shippingFee>5% Shipping Fee: $0.00</p>
-        <p id= orderTotal>Order Total: $0.00</p>
+        <p id =shippingFee>Shipping Fee: $0.00</p>
+        <br></r><hr><br>
+        <p id= orderTotal>Total: $0.00</p>
       </div>
-     
+     </div>
+
      </div><!-- end col 2 - second child -->
      <br><br>
      <button id="button_cart"><p>CHECKOUT</p></button>
-
-<script>
-
-     $('#button_cart')[0].onclick= function(){
-      if (validate()){
-
-        myWindow = window.open("", "OrderSummary", "width=1000,height=500");
-        myWindow.document.write('<html><head><link rel= \"stylesheet \" type= \"text/css \" href= \"confirmation.css \"></head>');
-        myWindow.document.writeln("<body><h1>Gracias! Thank you for your order, " + $('#name')[0].value + "!</h1>");
-        myWindow.document.writeln("<p>You Ordered: </p><ul>")
-        
-        for (i = 0; i < recipes.length; i++){
-          if($('.amount')[i].textContent != 0)
-            myWindow.document.writeln("<li>" + $('.amount')[i].textContent + "x " + recipes[i].name +  "</li>")
-        }
-        
-
-        myWindow.document.writeln("</ul><p>Your order will be shipped shortly and should arrive in 5-7 business days!</p></body></html>");
-
-     }
- }
-
-
-
-
-      function validate() {
-        valid = false;
-        statevalid = false;
-        orderedSomething = false; 
-
-         for (i = 0; i < recipes.length; i++) {
-          if ($('.amount')[i].textContent != 0){
-            orderedSomething = true;
-          }
-        }
-
-        if (!orderedSomething){
-          alert('You did not order anything!');
-        }
-
-          for (i in stateList) {
-            if ($('#stateselector')[0].value == stateList[i])
-            statevalid = true;
-              valid = true; 
-          }
-    
-        if ($('#name')[0].value == ""){
-          valid = false;
-          alert('Please enter your first name!');
-        }
-
-        if ($('#lname')[0].value == ""){
-          valid = false;
-          alert('Please enter your last name!');
-        }
-
-         if ($('#street')[0].value == ""){
-           valid = false;
-          alert('Please enter your street address!');
-        }
-
-          if (!(statevalid)){
-            alert('Please enter a valid state!')
-          }
-
-         zipvalid = true;
-
-        for (i in $('#zip')[0].value)
-          if (isNaN($('#zip')[0].value[i])){
-            zipvalid = false;
-        }
-
-        if (zipvalid == false || $('#zip')[0].value.length != 5){
-          valid = false;
-          alert('Please enter a valid 5-digit ZIP code!')
-        }
-
-        digitcounter = 0
-        for (i in $('#cardnumber')[0].value){
-
-          if (!(isNaN($('#cardnumber')[0].value[i])))
-            digitcounter++;
-          else
-            digitcounter = 1000;
-        }
-
-        if (digitcounter != 15 && digitcounter != 16){
-          alert('Please enter a valid 15 or 16-digit credit card number (only digits)!');
-          valid = false;
-        }
-
-        digitcounter = 0
-
-        for (i in $('#cvv')[0].value){
-
-          if (!(isNaN($('#cvv')[0].value[i])))
-            digitcounter++;
-          else
-            digitcounter = 1000;
-        }
-
-        if (digitcounter != 3){
-          alert('Please enter a valid three-digit CVV!');
-          valid = false;
-        }
-        return (valid && orderedSomething);
-      }
-
-  </script> 
-
+   
      </div>
      
 
     </section> <!-- end content-->
+
+
+   </div>
+    <section class="slide-box">
+     <!-- subheading for this apge using h2 -->
+     <h2>Check our other recipes!</h2> <br>
+     <div class="container">
+       <ul class="horscroll" id="autoscrollR">
+        <li>
+           <div class="card">
+          <a href="https://www.google.com/"><img src="images/ceviche.jpeg" alt="Ceviche"></a>    
+          <div class="title-line">
+           <object data="images/peru.png"> </object>
+           <p class="price"> CEVICHE </p>
+          </div>
+          <p class="description">Ceviche is a seafood dish where diced cubes of raw fish, marinated in a lemon or lime juice mixture, 
+           react with the citrus juices to cure the fish protein and causes it to become opaque and firm while absorbing flavor.</p>
+           </div>
         
- <footer>
-  This is the footer
- </footer>
+       </li>
+       <li>
+        <div class="card">
+         <img src="images/ceviche.jpeg" alt="Ceviche">      
+         <div class="title-line">
+          <object data="images/peru.png"> </object>
+          <p class="price"> CEVICHE </p>
+         </div>
+         <p class="description">Ceviche is a seafood disddd causes it to become opaque and firm while absorbing flavor.</p>
+          </div>
+       </li>
+       <li>
+        <div class="card">
+         <img src="images/ceviche.jpeg" alt="Ceviche">      
+         <div class="title-line">
+          <object data="images/peru.png"> </object>
+          <p class="price"> CEVICHE </p>
+         </div>
+         <p class="description">Ceviche is a seafood dish where diced cubes of raw fish, marinated in a lemon or lime juice mixture, 
+          react with the citrus juices to cure the fish protein and causes it to become opaque and firm while absorbing flavor.</p>
+          </div>
+       </li>
+       <li>
+        <div class="card">
+         <img src="images/ceviche.jpeg" alt="Ceviche">      
+         <div class="title-line">
+          <object data="images/peru.png"> </object>
+          <p class="price"> CEVICHE </p>
+         </div>
+         <p class="description">Ceviche is a seafood dish where diced cubes of raw fish, marinated in a lemon or lime juice mixture, 
+          react with the citrus juices to cure the fish protein andd causes it to become opaque and firm while absorbing flavor.</p>
+          </div>
+       </li>
+       </ul>
+     </div>
+ 
+       <br><br>
+ 
+    </section>
+
+ </div>
+        
+ <div id="footer" class="footer-wrapper">
+      <footer class="footer">
+        <ul class="footer-otherLinks">
+          <li class="footer-listItem"><a href="####">Privacy Policy</a></li>
+          <li class="footer-listItem"><a href="####">Accessibility</a></li>
+          <li class="footer-listItem"><a href="####">Terms of Use</a></li>
+        </ul>
+        <ul class="footer-socialMedia">
+          <li><a href="####"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="####"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="####"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="####"><i class="fa fa-youtube"></i></a></li>
+          <li><a href="####"><i class="fa fa-pinterest"></i></a></li>
+        </ul>
+        <p class="footer-copyRights">&copy; 2022 Flavors De La Casa -US, Inc. All Rights Reserved.</p>
+      </footer>
+    </div>
     </body>
 </html>

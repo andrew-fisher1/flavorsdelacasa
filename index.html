@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flavors de La Casa</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="rules.css">
-    <link rel="stylesheet" href="rules_responsivity.css">
+    <link rel="stylesheet" href="CSS/rules.css">
+    <link rel="stylesheet" href="CSS/rules_responsivity.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="CSS/universal_rules.css">
     <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
-    <!-- <script type="text/javascript" src="index.js"></script> -->  
-  </head>
+  <style>
+   .main-box {
+   background-image: url('images/main2.jpg');
+   }
+  </style>
+  
+   </head>
   <body>
  
+  <div class="hold-header">
   <div id="header" class="header-wrapper">
       <header class="header">
         <img src="./images/logo.png" class="header-logo">
@@ -28,7 +33,7 @@
         </nav>
       </header>
     </div>   
-    
+    </div>
     
     <script>
     // fades in main elements of the page
@@ -38,14 +43,16 @@
      $('#main-text').hide().fadeIn(3000);
      });
    </script>
-
-   <section class="main-box"> 
+   <div class="hold-header">
+    <section class="main-box"> 
     <div class="main-content">
          <img id="main-logo" src="images/logo_white.png"> 
 
          <h1 id="main-text"> Cook our meal kits and taste <br>the flavor of Latin America!</h1>
     </div>
    </section>
+   </div>
+   
 
    <div class="fix-borders">
     <section class="brief-box"> <!-- parent -->
@@ -62,8 +69,7 @@
       </section>
 
    <section class="slide-box">
-    <!-- subheading for this apge using h2 -->
-    <h2>Check out this month's recipes!</h2> 
+    <h2>Check out this month's recipes!</h2> <br>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <div class="container">
       <ul class="horscroll" id="autoscrollR">
