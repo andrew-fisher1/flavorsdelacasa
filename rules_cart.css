@@ -14,18 +14,6 @@ body {
  /* width: 100vw; */
 }
 
-header {
- width: 100%;
- height: 100px;
- background-color: white;
-}
-
-footer {
- width: 100vw;
- height: 150px;
- background-color: white;
-}
-
 #content-box {
  background-color:#F1EBD3;
  width: 100vw;
