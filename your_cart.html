@@ -157,8 +157,7 @@
         recipes = new Array (
          new recipe("ceviche", 5),
          new recipe("ceviche", 2),
-         new recipe("ceviche", 2),
-         // new recipe("ceviche", 2),
+         new recipe("ceviche", 2)
         )
    
         var s = "";
@@ -250,10 +249,10 @@
 	<script>
 
      $('#button_cart')[0].onclick= function(){
-      if (validate()){
+      //if (validate()){
 
         myWindow = window.open("", "OrderSummary", "width=1000,height=500");
-	 myWindow.document.write('<html><head><link rel="stylesheet" type="text/css" href="CSS/confirmation.css"></head><body>');
+	myWindow.document.write('<html><head><link rel="stylesheet" type="text/css" href="CSS/confirmation.css"></head><body>');
         myWindow.document.writeln("<body><h1>Gracias! Thank you for your order, " + $('#name')[0].value + "!</h1>");
         myWindow.document.writeln("<p>You Ordered: </p><ul>")
         
@@ -265,7 +264,7 @@
 
         myWindow.document.writeln("</ul><p>Your order will be shipped shortly and should arrive in 5-7 business days!</p></body></html>");
 
-       }
+      // }
  }
 
 
