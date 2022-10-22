@@ -5,33 +5,15 @@
         <meta content="width=device-width, initial-scale=1" name="viewport" />
          <title>Your Cart</title>
         <link rel="stylesheet" href="rules_cart.css">
-        <!-- <link rel="stylesheet" href="rules_responsivity.css"> -->
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="header.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
           <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
         <style>
 
-
-            /* body {background-color: #35a16e; color: black;}
-            
-            #top {background-size:cover;  height: 100px;  width: 100%; padding-top: 25px; box-sizing:border-box; text-align:center; font-size:  40px;  position:fixed;  z-index:99}
-		
-		    #content {position:absolute;  top: 100px; width: 100%}
-
-        .forms{width: 43%; display:inline-block; height: 800px; vertical-align: top; margin-left:5%; margin-right: 2%; text-align:center;}
-		    .info-form{background-color:#F1EBD3; display:inline-block; height: 250px; vertical-align: top;}
-        .credit-form{background-color:#F1EBD3; display:inline-block; height: 200px; margin-top:5%; width: 100%;}
-
-		    .add-items{width: 43%; display:inline-block; background-color:#F1EBD3;  color: black; vertical-align: top; height: 800px; margin-left: 5%; text-align:center;}
-			.add-items h1 {text-align:center;}
-			.add-items img {max-width: 130px;}
-
-			.add-items td {padding: 70px 70px 0 0; margin-left: 50px;}
-
-			.info-form td {padding: 5px;}
-			.info-form {text-align:center;} */
-
-			textarea {resize:none;} /* KEEP IT IN THE IN-STYLE SHEET*/
+   textarea {resize:none;} /* KEEP IT IN THE IN-STYLE SHEET*/
 
    #banner-box {
     width: 100vw;
@@ -54,11 +36,19 @@
 
     <body>
 
-     <header> 
-     
-      This is the header
-
-     </header>    
+     <div id="header" class="header-wrapper">
+      <header class="header">
+        <img src="./images/logo.png" class="header-logo">
+        <nav class="header-nav">
+          <ul>
+            <li><a href="####">Home</a></li>
+            <li><a href="####">Recipes</a></li>
+            <li><a href="####">About</a></li>
+            <li><a href="your_cart.html">Cart</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>      
 
       <section id='banner-box'> <!-- I assume htis is the top part -->
         <h1>Your Cart</h1>
@@ -260,8 +250,22 @@
 
     </section> <!-- end content-->
         
- <footer>
-  This is the footer
- </footer>
+ <div id="footer" class="footer-wrapper">
+      <footer class="footer">
+        <ul class="footer-otherLinks">
+          <li class="footer-listItem"><a href="####">Privacy Policy</a></li>
+          <li class="footer-listItem"><a href="####">Accessibility</a></li>
+          <li class="footer-listItem"><a href="####">Terms of Use</a></li>
+        </ul>
+        <ul class="footer-socialMedia">
+          <li><a href="####"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="####"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="####"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="####"><i class="fa fa-youtube"></i></a></li>
+          <li><a href="####"><i class="fa fa-pinterest"></i></a></li>
+        </ul>
+        <p class="footer-copyRights">&copy; 2022 Flavors De La Casa -US, Inc. All Rights Reserved.</p>
+      </footer>
+    </div>
     </body>
 </html>
