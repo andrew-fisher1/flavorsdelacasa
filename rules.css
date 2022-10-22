@@ -343,7 +343,7 @@ footer {
 }
 
 .header-wrapper {
-  padding: 0 20px;
+  padding: 20px 0;
   background-color: var(--color-primary);
   width: 100%;
 }
