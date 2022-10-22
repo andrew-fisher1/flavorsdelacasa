@@ -349,6 +349,14 @@ body {
  padding: 10px;
 }
 
+@media screen and (max-width: 500px) {
+ .description {
+  padding: 20px;
+  font-size: 13px;
+ }
+
+}
+
 .card button {
  background-color: #BF2608;
  border: none;
@@ -368,3 +376,5 @@ body {
  height: 3vw;
  font-size: 1.5vw;
 }
+
+
