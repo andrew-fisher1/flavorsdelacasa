@@ -251,7 +251,7 @@
 <script>
 
      $('#button_cart')[0].onclick= function(){
-      //if (validate()){
+      if (validate()){
 
         myWindow = window.open("", "OrderSummary", "width=1000,height=500");
         myWindow.document.write('<html><head><link rel= \"stylesheet \" type= \"text/css \" href= \"confirmation.css \"></head>');
@@ -266,25 +266,7 @@
 
         myWindow.document.writeln("</ul><p>Your order will be shipped shortly and should arrive in 5-7 business days!</p></body></html>");
 
- /*
-   myWindow.document.writeln("<p><strong> Order Summary: </strong></p>");
-  
-   // print each item that was ordered
-   for (i = 0; i < menuItems.length; i++){
-     itemName = menuItems[i].name;
-     itemCost = twoDecimal(menuItems[i].cost);
-     quantityOrdered = $('.selectQuantity')[i].lastChild.value;
- 
-     if (quantityOrdered != 0){
-       myWindow.document.writeln("<p>" + quantityOrdered + "x " + itemName + " @ $" + itemCost + " = $" + twoDecimal(quantityOrdered * itemCost));
      }
-   }
- 
-   myWindow.document.writeln("<hr><p>Subtotal: $" + subtotalBox.value + "</p>");
-   myWindow.document.writeln("<p>Mass tax 6.25%: $" + taxBox.value + "</p>");
-   myWindow.document.writeln("<p>Total: $" + totalBox.value + "</p>");
-   */
-      // }
  }
 
 
