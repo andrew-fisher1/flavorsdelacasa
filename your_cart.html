@@ -253,6 +253,7 @@
       if (validate()){
 
         myWindow = window.open("", "OrderSummary", "width=1000,height=500");
+	 myWindow.document.write('<html><head><link rel="stylesheet" type="text/css" href="CSS/confirmation.css"></head><body>');
         myWindow.document.writeln("<body><h1>Gracias! Thank you for your order, " + $('#name')[0].value + "!</h1>");
         myWindow.document.writeln("<p>You Ordered: </p><ul>")
         
