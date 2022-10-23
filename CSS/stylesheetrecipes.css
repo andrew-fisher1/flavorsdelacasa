@@ -72,32 +72,6 @@ a {
 	letter-spacing:0;
 }
 
-.origin {
-    color:rgba(0, 0, 0, 1);
-	width:92px;
-	height:30px;
-	position:absolute;
-	left:190px;
-	top:590px;
-	font-family:Lato;
-	text-align:left;
-	font-size:16px;
-	letter-spacing:0;
-}
-
-.map {
-    width:500px;
-	height:340px;
-	position:absolute;
-	left:190px;
-	top:650px;
-	background-repeat:no-repeat;
-	background-size:cover;
-    border-color: black;
-    border-style: dashed;
-    border-width: 3px;
-}
-
 .previewrecipe {
     color:rgba(0, 0, 0, 1);
 	width:350px;
@@ -130,7 +104,7 @@ a {
 	height:30px;
 	position:absolute;
 	left:190px;
-	top:1060px;
+	top:590px;
 	font-family:Lato;
 	text-align:left;
 	font-size:16px;
@@ -143,24 +117,10 @@ a {
 	height:30px;
 	position:absolute;
 	left:190px;
-	top:1150px;
+	top:650px;
 	font-family:Lato;
 	text-align:left;
 	font-size:16px;
-	letter-spacing:0;
-}
-
-
-.selectionsaddcart {
-    color:rgba(0, 0, 0, 1);
-	width:500px;
-	height:340px;
-	position:absolute;
-	left:760px;
-	top:1100px;
-	font-family:Lato;
-	text-align:left;
-	font-size:24px;
 	letter-spacing:0;
 }
 
@@ -180,23 +140,3 @@ a {
 
 }
 
-#cart {
-    width: 100px;
-    height: 30px;
-    font-family:Lato;
-	text-align:center;
-	font-size:18px;
-}
-
-.numpeople {
-    color:rgba(0, 0, 0, 1);
-	width:500px;
-	height:340px;
-	position:absolute;
-	left:760px;
-	top:1140px;
-	font-family:Lato;
-	text-align:left;
-	font-size:16px;
-	letter-spacing:0;
-}
