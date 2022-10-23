@@ -251,19 +251,20 @@
      $('#button_cart')[0].onclick= function(){
       //if (validate()){
 
-        myWindow = window.open("", "OrderSummary", "width=1000,height=500");
-	myWindow.document.write('<html><head><link rel="stylesheet" type="text/css" href="CSS/confirmation.css"></head><body>');
+         myWindow = window.open("", "OrderSummary", "width=1000,height=500");
+	    myWindow.document.write('<html><head><link rel="stylesheet" type="text/css" href="CSS/confirmation.css"></head><body>');
         myWindow.document.writeln("<h1>Gracias! Thank you for your order, " + $('#name')[0].value + "!</h1>");
         myWindow.document.writeln("<p>You Ordered: </p><ul>")
         
         for (i = 0; i < recipes.length; i++){
           if($('.amount')[i].textContent != 0)
-            myWindow.document.writeln("<li>" + $('.amount')[i].textContent + "x " + recipes[i].name +  "</li>")
+            myWindow.document.writeln("<li><strong>" + $('.amount')[i].textContent + "x " + recipes[i].name +  "</strong></li>")
         }
-        
 
-        myWindow.document.writeln("</ul><p>Your order will be shipped shortly and should arrive in 5-7 business days!</p></body></html>");
-
+        myWindow.document.writeln("<p>Your Order Total Was: " + $('#orderTotal')[0].textContent.substr(6) + "</p>");
+        myWindow.document.writeln("</ul><p>Confirmation Number: #" + Math.round(Math.random() * 1000000000) + "</p>");
+        myWindow.document.writeln("<p>Your order will be shipped shortly and should arrive in 5-7 business days!</p></body></html>");
+        myWindow.document.writeln("<img src='images/checkmark3.png'>")
       // }
  }
 
