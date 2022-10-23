@@ -1,9 +1,3 @@
-
-* {
-    margin: 0;
-    padding: 0;
-  }
-  
 .header ul{
    display: flex;
    list-style: none;
@@ -68,7 +62,7 @@
 	position:absolute;
 	left:190px;
 	top:193px;
-	background-image:url(cebicho.jpeg);
+	background-image:url(ceviche.jpeg);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
