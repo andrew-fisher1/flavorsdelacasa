@@ -62,7 +62,7 @@
 	position:absolute;
 	left:190px;
 	top:193px;
-	background-image:url(ceviche.jpeg);
+	background-image:url(images/ceviche.jpeg);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -136,7 +136,7 @@
 	position:absolute;
 	left:190px;
 	top:650px;
-	background-image:url(perumap.jpg);
+	background-image:url(images/perumap.jpg);
 	background-repeat:no-repeat;
 	background-size:cover;
     border-color: black;
