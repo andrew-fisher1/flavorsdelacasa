@@ -90,6 +90,16 @@
 	letter-spacing:0;
 }
 
+.flag {
+	width:57px;
+	height:40px;
+	position:absolute;
+	left:853px;
+	top:205px;
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
 .history{
     color:rgba(0, 0, 0, 1);
 	width:92px;
