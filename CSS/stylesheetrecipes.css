@@ -72,32 +72,6 @@ a {
 	letter-spacing:0;
 }
 
-.previewrecipe {
-    color:rgba(0, 0, 0, 1);
-	width:350px;
-	height:30px;
-	position:absolute;
-	left:760px;
-	top:590px;
-	font-family:Lato;
-	text-align:left;
-	font-size:16px;
-	letter-spacing:0;
-}
-
-.video {
-    color:rgba(0, 0, 0, 1);
-	width:500px;
-	height:340px;
-	position:absolute;
-	left:760px;
-	top:650px;
-	font-family:Lato;
-	text-align:right;
-	font-size:16px;
-	letter-spacing:0;
-}
-
 .ingredients {
     color:rgba(0, 0, 0, 1);
 	width:350px;
@@ -120,6 +94,32 @@ a {
 	top:650px;
 	font-family:Lato;
 	text-align:left;
+	font-size:16px;
+	letter-spacing:0;
+}
+
+.previewrecipe {
+    color:rgba(0, 0, 0, 1);
+	width:350px;
+	height:30px;
+	position:absolute;
+	left:760px;
+	top:590px;
+	font-family:Lato;
+	text-align:left;
+	font-size:16px;
+	letter-spacing:0;
+}
+
+.video {
+    color:rgba(0, 0, 0, 1);
+	width:500px;
+	height:340px;
+	position:absolute;
+	left:760px;
+	top:650px;
+	font-family:Lato;
+	text-align:right;
 	font-size:16px;
 	letter-spacing:0;
 }
