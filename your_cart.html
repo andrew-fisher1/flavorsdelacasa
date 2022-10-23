@@ -249,7 +249,7 @@
 	<script>
 
      $('#button_cart')[0].onclick= function(){
-      //if (validate()){
+      if (validate()){
 
          myWindow = window.open("", "OrderSummary", "width=1000,height=500");
 	    myWindow.document.write('<html><head><link rel="stylesheet" type="text/css" href="CSS/confirmation.css"></head><body>');
@@ -265,7 +265,7 @@
         myWindow.document.writeln("</ul><p>Confirmation Number: #" + Math.round(Math.random() * 1000000000) + "</p>");
         myWindow.document.writeln("<p>Your order will be shipped shortly and should arrive in 5-7 business days!</p></body></html>");
         myWindow.document.writeln("<img src='images/checkmark3.png'>")
-      // }
+       }
  }
 
 
