@@ -40,7 +40,7 @@ a {
       width:57px;
       height:40px;
       position:absolute;
-      left:1000px;
+      left:910px;
       top:190px;
       background-repeat:no-repeat;
       background-size:cover;
@@ -139,6 +139,9 @@ a {
       color: white;
   
   }
+
+  
+
 
   * {
     margin: 0;
@@ -274,4 +277,3 @@ a {
   .footer-copyRights {
     font-size: 1.15vw;
   }
-  
