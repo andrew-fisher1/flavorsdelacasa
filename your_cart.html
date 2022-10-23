@@ -287,9 +287,10 @@
         }
 
           for (i in stateList) {
-            if ($('#stateselector')[0].value == stateList[i])
-            statevalid = true;
+            if ($('#stateselector')[0].value == stateList[i]){
+              statevalid = true;
               valid = true; 
+	    }
           }
     
         if ($('#name')[0].value == ""){
