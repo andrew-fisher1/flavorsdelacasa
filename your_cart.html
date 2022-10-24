@@ -155,9 +155,9 @@
         }
    
         recipes = new Array (
-         new recipe("ceviche", 25.00),
-         new recipe("pao de queijo", 18.00),
-         new recipe("alfajor", 15.00)
+         new recipe("Ceviche", 25.00),
+         new recipe("Pão de queijo", 18.00),
+         new recipe("Alfajor", 15.00)
         )
    
         var s = "";
@@ -166,8 +166,8 @@
          s += "<tr>";
 		
 	 recipepic = recipes[i].name + ".jpeg";
-	 if (recipes[i].name == "pao de queijo"){
-		 recipepic = "paodequeijo.jpg";
+	 if (recipes[i].name == "Pão de queijo"){
+		 recipepic = "images/paodequeijo.jpg";
 	 }
          s += "<td class='ico'><img src = \"images/" + recipepic +  "\"></td>";
          s += "<td class='type'><p>" + recipes[i].name + "</p></td>";
