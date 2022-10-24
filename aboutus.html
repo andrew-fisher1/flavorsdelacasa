@@ -37,6 +37,31 @@
    h2 {
     color:#BF2608;
    }
+
+   .contact-us {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+   }
+
+   .contact-us label {
+    font-size: 2vw;
+   }
+
+   .contact-us input {
+    width: 100%;
+   }
+
+   .meet-chef {
+    background-color: #E28025;
+    width: 100%;
+    min-height:400px;
+   }
+   .meet-chef iframe {
+    width: 60%;
+    height: 60%;
+    min-height: 600px;
+   }
     
   </style>
   
@@ -48,7 +73,7 @@
   <div class="hold-header">
   <div id="header" class="header-wrapper">
       <header class="header">
-        <a href="index.html"><img src="./images/logo.png" class="header-logo"></a>
+        <img src="./images/logo.png" class="header-logo">
         <nav class="header-nav">
           <ul>
             <li><a href="./index.html">Home</a></li>
@@ -74,11 +99,40 @@
         <p class="brief-child" id="brief-text">   
       
          Flavors De La Casa was started in 2022 by four students at Tufts University that understand the value of a delicious 
-         home cooked meal. We are committed to providing you with the best Latin American recipes and top-shelf imported ingredients
+         home cooked meal. We are committed to providing you with the best South American recipes and top-shelf imported ingredients
          to cook them with. We hope you enjoy!!!
       
         </p>
    </div>
+      </section>
+
+      <section class="meet-chef">
+       <br><br>
+       <h2 style="text-align:center; color: white;">Meet one of our chefs!</h2><br><br>
+       <div class="video">
+        <iframe style="margin: auto; display: flex;" src="https://www.youtube.com/embed/v7A-IMlTPEo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <br><br>
+       </section>
+
+      <section class="contact-us">
+       <br><br>
+       <form action="/action_page.php">
+         <label for="email">Join our e-list to keep updated in the Flavors de La Casa:</label>
+         <input type="email" id="email" name="email">
+         <input type="button" value="Sign in now!" onclick="email_us();">
+       </form>
+
+      <br><br><br>
+
+
+      <script>
+       function email_us() 
+       {
+        alert("Thank you! Your email address has been included in our e-list!");
+
+       }
+
+      </script>
       </section>
 	     
        <div id="footer" class="footer-wrapper">
@@ -89,11 +143,11 @@
           <li class="footer-listItem"><a href="your_cart.html">Cart</a></li>
         </ul>
         <ul class="footer-socialMedia">
-          <li><a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="https://twitter.com"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a></li>
-          <li><a href="https://www.youtube.com"><i class="fa fa-youtube"></i></a></li>
-          <li><a href="https://www.pinterest.com"><i class="fa fa-pinterest"></i></a></li>
+          <li><a href="####"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="####"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="####"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="####"><i class="fa fa-youtube"></i></a></li>
+          <li><a href="####"><i class="fa fa-pinterest"></i></a></li>
         </ul>
         <p class="footer-copyRights">&copy; 2022 Flavors De La Casa -US, Inc. All Rights Reserved.</p>
       </footer>
