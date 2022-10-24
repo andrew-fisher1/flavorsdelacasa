@@ -36,7 +36,7 @@
       margin-bottom: 20px;
     }
 
-    #recipe-cards {
+    .recipe-cards {
       display:flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -133,11 +133,11 @@
     </div>
 
     <div>
-      <ul id="recipe-cards">
+      <ul class="recipe-cards" id="WhatWeHaveNow">
       </ul>
     </div>
     <script>
-      let cards = document.getElementById("recipe-cards");
+      let cards = document.getElementById("WhatWeHaveNow");
     
       for (i=0; i < recipeCards.length; i++) {
         var s = ""
