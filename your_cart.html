@@ -166,10 +166,10 @@
          s += "<tr>";
 		
 	 recipepic = recipes[i].name + ".jpeg";
-	 if (recipepic == "pao de queijo"){
+	 if (recipes[i].name == "pao de queijo"){
 		 recipepic = "paodequeijo.jpg";
 	 }
-         s += "<td class='ico'><img src = \"images/ " + recipepic +  "\"></td>";
+         s += "<td class='ico'><img src = \"images/" + recipepic +  "\"></td>";
          s += "<td class='type'><p>" + recipes[i].name + "</p></td>";
          s += "<td class='price'><p>$" + recipes[i].cost + " each</p></td>";
          s += "<td class='selector'>" + makeSelector(i) + "</td>"
