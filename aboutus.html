@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -62,6 +63,23 @@
     height: 60%;
     min-height: 600px;
    }
+
+   #buy-button {
+ display: block;
+ margin: auto;
+
+ width: 192.66px;
+ height: 60px;
+ left: 760px;
+ top: 470px;
+ background: #E28025;
+ border-radius: 300px;
+ font-family:Lato;
+ text-align:center;
+ font-size:20px;
+ border: none;
+ color: white;
+}
     
   </style>
   
@@ -117,9 +135,8 @@
       <section class="contact-us">
        <br><br>
        <form action="/action_page.php">
-         <label for="email">Join our e-list to keep updated in the Flavors de La Casa:</label>
-         <input type="email" id="email" name="email">
-         <input type="button" value="Sign in now!" onclick="email_us();">
+         <label for="email">Send us a message on our phone number!</label><br><br>
+         <input id="buy-button" type="button" value="Give us a call!" onclick="email_us();">
        </form>
 
       <br><br><br>
@@ -128,8 +145,7 @@
       <script>
        function email_us() 
        {
-        alert("Thank you! Your email address has been included in our e-list!");
-
+        alert("Feel free to SMS or call us on 781-888-8888!");
        }
 
       </script>
