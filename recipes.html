@@ -101,6 +101,12 @@
       new recipeCard("alfajor.jpeg", "Alfajor", "recipe3", "Alfajor is buttery cornstarch cookie sandwich filled with dulce de leche. It was brought to South America in the 16th century with the invasion of the Spanish conquistadors. It is very popular in Argentina."),
       new recipeCard("enchilada.jpg", "Enchilada", "recipe4", "Enchilada is a Mexican dish that dates back at least to Aztec times. It consists of a corn tortilla rolled around a filling and covered with a savory sauce. It can be filled with meats, cheese, beans and vegetables.")
     );
+    
+    newRecipeCards = new Array(
+      new recipeCard("tacos.jpg", "Tacos", "####", "A taco is a traditional Mexican food consisting of a small hand-sized corn- or wheat-based tortilla topped with a filling."),
+      new recipeCard("Brigadeiro.jpg", "Brigadeiro", "####", "A traditional Brazilian that is generally shaped into small balls covered in chocolate sprinkles and placed in a small cupcake liner. With many different flavors, you'll never get tired of these!"), 
+      new recipeCard("tresLeches.jpg", "Tres Leche", "####", "A sponge cake—soaked in three kinds of milk: evaporated milk, condensed milk, and whole milk. Tres leches is a very light cake, with many air bubbles!"),
+    );
 
   </script>
   <body>
@@ -146,6 +152,32 @@
         s += "</div>";
         s += "</li>";
         cards.innerHTML += s;
+      }
+    </script>
+  
+    <div class ='recipes-heading'>
+      <h2>Coming soon...</h2>
+      <p>Didn't find anything you like? Well don't stay away too long. Every week we come up with dozens of new flavors for you to try.</p>
+    </div>
+
+    <div>
+      <ul class="recipe-cards" id="ComingSoon">
+      </ul>
+    </div>
+    <script>
+      let newRecipes = document.getElementById("ComingSoon");
+    
+      for (i=0; i < recipeCards.length; i++) {
+        var s = ""
+        s += "<li>"
+        s += "<div class='card recipe-card'>"
+        s += "<img src='./images/" + newRecipeCards[i].image + "'>"
+        s += "<div class='description-box'>"
+        s += "<h4>" + newRecipeCards[i].name + "</h4>"
+        s += "<p>" + newRecipeCards[i].description + "</p></div>"
+        s += "</div>";
+        s += "</li>";
+        newRecipes.innerHTML += s;
       }
     </script>
 
