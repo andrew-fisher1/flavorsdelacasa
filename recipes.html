@@ -19,15 +19,28 @@
       background-position: center;
       background-attachment: scroll;
       width: 100%; /* take the complete extension of the viewpart */
-      height: 100vh;
+      height:fit-content;
+      max-height: 426px;
+
+      position: relative;
+      /* display: inline-block; */
     }
+
+    .flags img {
+     width: 100%;
+    }
+
+    #banner-box {
+    width: 100vw;
+    background-color: #F1EBD3;
+   }
 
     .recipes-heading{
       width: 60%;
       align-items: center;
       text-align: center;
       background-color: white;
-      display: felx;
+      display: flex;
       flex-direction: column;
       margin: auto;
       margin-bottom: 50px;
@@ -78,6 +91,16 @@
       font-size: 12px;
       margin: 10px;
     }
+
+    @media screen and (max-width: 350px) {
+     .description-box {
+      height: fit-content;
+     }
+
+     .description-box p{
+      font-size: 10px;
+     }
+    }
   </style>
   </head>
   <script>
@@ -100,7 +123,7 @@
   <body>
     <div id="header" class="header-wrapper">
       <header class="header">
-        <a href="index.html"><img src="./images/logo.png" class="header-logo"></a>
+        <img src="./images/logo.png" class="header-logo">
         <nav class="header-nav">
           <ul>
             <li><a href="./index.html">Home</a></li>
@@ -111,8 +134,13 @@
         </nav>
       </header>
     </div>  
-
+    <br>
+    </section>
+    <br><br><br><br><br><br>
+    
+   
     <div class="flags" ></div>
+
   
     <div class ='recipes-heading'>
       <h2>Check out our Recipes</h2>
