@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <link rel="stylesheet" href="rules_responsivity.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="rules.css">
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    
+  <style>
+    .flags {
+      background-image: url("./images/flags.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: scroll;
+      width: 100%; /* take the complete extension of the viewpart */
+      height: 100vh;
+    }
+
+    .recipes-heading{
+      width: 60%;
+      align-items: center;
+      text-align: center;
+      background-color: white;
+      display: felx;
+      flex-direction: column;
+      margin: auto;
+      margin-bottom: 50px;
+    }
+
+    .recipes-heading h2 {
+      font-size: 42px;
+      text-transform: capitalize;
+      font-weight: 500;
+      margin: 20px
+    }
+
+    #recipe-cards {
+      display:flex;
+      flex-direction: row;
+    }
+
+    .recipe-card {
+      background-color: #bf2608 !important;
+      color: white !important;
+      text-decoration: none;
+      margin: 
+    }
+
+    .recipe-card a{
+      color: white !important;
+      text-decoration: none;
+    }
+
+    .description-box {
+      margin: 25px;
+      height: 135px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid white
+    }
+
+    .description-box h4{
+      font-weight:400;
+      width: 300px;
+    }
+
+    .description-box p{
+      font-size: 12px;
+      margin: 10px;
+    }
+  </style>
+  </head>
+  <script>
+    function recipeCard(image, name, id, description)
+    {
+      this.name = name;
+      this.id = id
+      this.image = image;
+      this.description = description;
+    }
+
+    recipeCards = new Array(
+      new recipeCard("cebicho.jpeg", "Ceviche", "recipe1", "Ceviche is a seafood dish where diced cubes of raw fish, marinated in a lemon or lime juice mixture, react with the citrus juices to cure the fish protein and causes it to become opaque and firm while absorbing flavor."),
+      new recipeCard("paodequeijo.jpg", "Pão de Queijo", "recipe2", "Pão de queijo or Cheese Bread is a typical Brazilian snack. It originated in the 18th century and its ingredients include manioc starch and “meia cura” cheese."), 
+      new recipeCard("desert.jpeg", "Alfajor", "recipe3", "Alfajor is buttery cornstarch cookie sandwich filled with dulce de leche. It was brought to South America in the 16th century with the invasion of the Spanish conquistadors. It is very popular in Argentina."),
+      new recipeCard("enchilada.jpg", "Enchilada", "recipe4", "Enchilada is a Mexican dish that dates back at least to Aztec times. It consists of a corn tortilla rolled around a filling and covered with a savory sauce. It can be filled with meats, cheese, beans and vegetables.")
+    );
+
+  </script>
+  <body>
+    <div id="header" class="header-wrapper">
+      <header class="header">
+        <img src="./images/logo.png" class="header-logo">
+        <nav class="header-nav">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="####">Recipes</a></li>
+            <li><a href="####">About</a></li>
+            <li><a href="####">Cart</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>  
+
+    <div class="flags" ></div>
+  
+    <div class ='recipes-heading'>
+      <h2>Check out our Recipes</h2>
+      <p>Take a look at all the recipes we have to offer. From Brazil to Chile to El Salvador to Mexico, we have all your favorite flavors from all across South America.</p>
+    </div>
+
+    <div>
+      <ul id="recipe-cards">
+      </ul>
+    </div>
+    <script>
+      let cards = document.getElementById("recipe-cards");
+    
+      for (i=0; i < recipeCards.length; i++) {
+        var s = ""
+        s += "<li>"
+        s += "<div class='card recipe-card'>"
+        s += "<a href='" + recipeCards[i].id + "'>"
+        s += "<img src='./images/" + recipeCards[i].image + "'>"
+        s += "<div class='description-box'>"
+        s += "<h4>" + recipeCards[i].name + "</h4>"
+        s += "<p>" + recipeCards[i].description + "</p></div>"
+        s += "</a>"
+        s += "</div>";
+        s += "</li>";
+        cards.innerHTML += s;
+      }
+    </script>
+
+
+    <div id="footer" class="footer-wrapper">
+      <footer class="footer">
+        <ul class="footer-otherLinks">
+          <li class="footer-listItem"><a href="####">Privacy Policy</a></li>
+          <li class="footer-listItem"><a href="####">Accessibility</a></li>
+          <li class="footer-listItem"><a href="####">Terms of Use</a></li>
+        </ul>
+        <ul class="footer-socialMedia">
+          <li><a href="####"><i class="fa-footer fa fa-facebook"></i></a></li>
+          <li><a href="####"><i class="fa-footer fa fa-twitter"></i></a></li>
+          <li><a href="####"><i class="fa-footer fa fa-instagram"></i></a></li>
+          <li><a href="####"><i class="fa-footer fa fa-youtube"></i></a></li>
+          <li><a href="####"><i class="fa-footer fa fa-pinterest""></i></a></li>
+        </ul>
+        <p class="footer-copyRights">&copy; 2022 Flavors De La Casa -US, Inc. All Rights Reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
