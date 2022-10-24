@@ -25,13 +25,13 @@ a {
   
   .titlerecipe {
       color:rgba(0, 0, 0, 1);
-      width:120px;
+      width:150px;
       height:30px;
       position:absolute;
       left:755px;
       top:185px;
       font-family:Lato;
-      text-align:right;
+      text-align:left;
       font-size:20px;
       letter-spacing:0;
   }
