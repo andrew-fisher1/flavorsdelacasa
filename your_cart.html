@@ -87,6 +87,8 @@
       <datalist id="states">
      
       <script>
+	      
+	// list of all states that user can select
        stateList = new Array ("Alabama", "Alaska", "Arizona", "Arkansas", "California",
        "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii",
        "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana",
@@ -96,7 +98,7 @@
        "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota",
        "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia",
        "Wisconsin", "Wyoming")
-
+	
        for (i in stateList) {
         toAdd = "<option value= \"" + stateList[i] + "\">"
         document.writeln(toAdd)
@@ -149,11 +151,14 @@
    
       <table border="0" cellpadding="10" class="items" style="grid-column: 1 / -1;">
        <script>
+	 
+	// constructor for recipe
         function recipe(name, cost){
          this.name = name;
          this.cost=cost;
         }
-   
+   	
+	// all possible recipes in the cart
         recipes = new Array (
          new recipe("ceviche", 25.00),
          new recipe("pao de queijo", 18.00),
@@ -162,6 +167,7 @@
    
         var s = "";
         
+	 // list all recipes, images, prices, and allow user to select how many they want
         for (i=0; i< recipes.length; i++) {
          s += "<tr>";
 		
@@ -178,7 +184,7 @@
 
         document.writeln(s);
 
-   
+   	// makes a plus and minus button and displays the quantity for each recipe
         function makeSelector(index2) {
          index = index2;
          plusButton = "<img src= \"images/plus.png \"  width= \"20 \" height= \" 20 \" onclick = \"change(0," + index + ") \">"
@@ -186,7 +192,8 @@
          amountDisplay = "<p class = \" amount \">0</p>"
          return (plusButton + amountDisplay + minusButton);
         }
-   
+   	
+	// runs when user clicks + or - to change the quantity ordered
         function change(operation, index) {
          if (operation == 0)
           $('.amount')[index].textContent = parseInt($('.amount')[index].textContent) + 1;
@@ -194,10 +201,11 @@
           if (parseInt($('.amount')[index].textContent) > 0)
            $('.amount')[index].textContent = parseInt($('.amount')[index].textContent) - 1;
          }
-   
-         updatecosts()
-        }
-   
+  
+   	updatecosts()
+	}
+	 
+	// updates subtotal, shipping fee, and order total whenever quantity is changed
         function updatecosts() {
          subtotal = 0;
    
@@ -253,6 +261,7 @@
 		
 	<script>
 
+	// when the user submits, first validate the form, then if valid, open the confirmation window
      $('#button_cart')[0].onclick= function(){
       if (validate()){
 
@@ -275,12 +284,13 @@
 
 
 
-
+// validates each field of the form, alerting the user if there are errors
       function validate() {
         valid = false;
         statevalid = false;
         orderedSomething = false; 
 
+	      // check that the user ordered something
          for (i = 0; i < recipes.length; i++) {
           if ($('.amount')[i].textContent != 0){
             orderedSomething = true;
@@ -291,24 +301,27 @@
           alert('You did not order anything!');
         }
 
+	     // check that the user selected a valid state
           for (i in stateList) {
             if ($('#stateselector')[0].value == stateList[i]){
               statevalid = true;
               valid = true; 
 	    }
           }
-    
+    	
+	      // check that the user entered their first name
         if ($('#name')[0].value == ""){
           valid = false;
           alert('Please enter your first name!');
         }
 
+	      // check that the user entered their last name
         if ($('#lname')[0].value == ""){
           valid = false;
           alert('Please enter your last name!');
         }
 		
-	  console.log($('#street')[0]);    
+	  // check that the user entered a street address
          if ($('#street')[0].value == ""){
            valid = false;
           alert('Please enter your street address!');
@@ -319,7 +332,8 @@
           }
 
          zipvalid = true;
-
+	      
+	// check that the user entered a 5-digit zip
         for (i in $('#zip')[0].value)
           if (isNaN($('#zip')[0].value[i])){
             zipvalid = false;
@@ -329,7 +343,8 @@
           valid = false;
           alert('Please enter a valid 5-digit ZIP code!')
         }
-
+	
+	// check that the user entered a 15 or 16-digit credit card number
         digitcounter = 0
         for (i in $('#cardnumber')[0].value){
 
@@ -345,7 +360,8 @@
         }
 
         digitcounter = 0
-
+	
+	 // check that the user entered a 3 digit CVV
         for (i in $('#cvv')[0].value){
 
           if (!(isNaN($('#cvv')[0].value[i])))
