@@ -21,7 +21,7 @@
 	  
 	    body {
 		 
-		    height: 100vh;
+		    min-height: 100vh;
    }
 	  
 	  img {width:50%; margin:auto;}
@@ -31,6 +31,11 @@
 	  .main {height: 80vh;}
 	  
 	   
+   #banner-box {
+    position: relative;
+    padding-bottom: 10rem;
+   }
+
 
    #banner-box h1 {
     text-align: center;
@@ -39,10 +44,19 @@
     padding: 40px;
    }
 
+   @media screen and (min-width: 1200px) {
+    .footer {
+     position: relative;
+    }
+
+   }
+
    h2 {
 	   text-align:center;
     color:#BF2608;
    }
+
+
     
   </style>
   
@@ -68,35 +82,16 @@
     </div>
 	     
 	     <div class="main">
-	     
- <section id='banner-box'> <!-- Main Title Section -->
+ 
+ 
+       <section style="margin:auto; position: relative;" id='banner-box'> <!-- Main Title Section -->
         <h1>Sold Out</h1>
-      </section>
+        <img style="margin: auto; display:flex;"src= "images/soldout.png">
+       <h2>We are sorry, but we are unable to provide this recipe at this time.</h2>
 
-<h2>We are sorry, but we are unable to provide this recipe at this time.</h2>
-   
-   <img src= "images/soldout.png">
-   
-   <h2> Feel free to <a href= "recipes.html"> shop for our other recipes </a></h2>
-	<div>
-	     
-       <div id="footer" class="footer-wrapper">
-      <footer class="footer">
-        <ul class="footer-otherLinks">
-          <li class="footer-listItem"><a href="recipes.html">Recipes</a></li>
-          <li class="footer-listItem"><a href="aboutus.html">About Us</a></li>
-          <li class="footer-listItem"><a href="your_cart.html">Cart</a></li>
-        </ul>
-        <ul class="footer-socialMedia">
-          <li><a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="https://twitter.com"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a></li>
-          <li><a href="https://www.youtube.com"><i class="fa fa-youtube"></i></a></li>
-          <li><a href="https://www.pinterest.com"><i class="fa fa-pinterest"></i></a></li>
-        </ul>
-        <p class="footer-copyRights">&copy; 2022 Flavors De La Casa -US, Inc. All Rights Reserved.</p>
-      </footer>
+      </section>
     </div>
+	<div>	    
 			 </body>
 			
 </html>
